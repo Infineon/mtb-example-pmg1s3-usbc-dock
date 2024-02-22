@@ -1,0 +1,5 @@
+# Custom library ignore files and folders
+build/
+input/
+output/
+*.c
