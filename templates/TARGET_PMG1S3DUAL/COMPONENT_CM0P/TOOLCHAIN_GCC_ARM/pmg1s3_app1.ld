@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file pmg1s3_app1.ld
-* \version 1.10.1
+* \version 1.10.2
 *
 * Linker file for the GNU C compiler.
 *
@@ -19,8 +19,8 @@
 *
 ********************************************************************************
 * \copyright
-* (c) (2019-2021), Cypress Semiconductor Corporation (an Infineon company) or
-* an affiliate of Cypress Semiconductor Corporation.
+* (c) (2019-2026), Infineon Technologies AG, or
+* an affiliate of Infineon Technologies AG.
 *
 * SPDX-License-Identifier: Apache-2.0
 *
@@ -254,7 +254,7 @@ SECTIONS
     } > FLASH
     __exidx_end = .;
 
-    .copy.table :
+    .copy.table (READONLY) :
     {
         . = ALIGN(4);
         __copy_table_start__ = .;
@@ -267,7 +267,7 @@ SECTIONS
         __copy_table_end__ = .;
     } > FLASH
 
-    .zero.table :
+    .zero.table (READONLY) :
     {
         . = ALIGN(4);
         __zero_table_start__ = .;

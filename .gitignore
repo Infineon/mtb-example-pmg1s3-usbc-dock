@@ -10,22 +10,25 @@
 # ModusToolbox library repos or information about library dependencies
 libs/
 
-# Uncomment below line if you want to lock the library versions for your application
-# !locking_commit.log
+# Uncomment below line if you don't want to lock the library versions for your application
+# assetlocks.json
 
 # ModusToolbox Configurator generated code and lock file
 GeneratedSource/
 *.lock
 .mtbqueryapi
 
-# ModusToolbox BSP files. Any custom BSP file is shipped within the 'templates' folder
-bsps/
+# ModusToolbox BSP files. Any custom BSP file for code examples is shipped within the 'templates' folder
+# bsps/
 
 # ModusToolbox build system output
 build/
 Debug/
 Release/
 *_build/
+
+# Ninja build artefacts
+.ninja_*
 
 # Eclipse IDE for ModusToolbox files. Comment those files if you want to track them
 .metadata/
@@ -38,11 +41,7 @@ makefile.init
 # Visual Studio Code
 openocd.tcl
 .vscode/
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-# *.code-workspace
+*.code-workspace
 
 # IAR Embedded Workbench files
 
@@ -90,6 +89,7 @@ Backup*
 
 # Compiled Binaries
 *.bin
+*.elf
 *.hex
 *.map
 
